@@ -42,7 +42,7 @@ div {
 }
 
 .cloud4{
-  animation: cloud-left 50s linear infinite ;
+  animation: cloud-left 80s linear infinite ;
 }
 
 
@@ -312,6 +312,7 @@ button:focus {
   font-family: "Montserrat";
   font-weight: 500;
   margin-bottom: 1.4rem;
+  font-size: medium;
 }
 .loading__wrapper .loader {
   position: relative;

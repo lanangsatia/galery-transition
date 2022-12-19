@@ -1,57 +1,256 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - ScrollTrigger: SVG Text Mask</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - ScrollTrigger: SVG Text Mask</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href='https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap"rel="stylesheet'
+    />
+  </head>
+  <body>
+    <!-- <div class="loading__wrapper">
+      <div class="loader--text">Loading...</div>
+      <div class="loader">
+        <span></span>
+      </div>
+    </div> -->
+    <!-- partial:index.partial.html -->
+    <!-- This is a recreation of Unfold's (https://dribbble.com/unfold) parallax scene: https://cdn.dribbble.com/users/14268/screenshots/3275340/northface.gif -->
+    <div class="scrollDist"></div>
+    <div class="main">
+      <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+        <mask id="m">
+          <g class="cloud1">
+            <rect fill="#fff" width="100%" height="801" y="799" />
+            <image
+              xlink:href="https://assets.codepen.io/721952/cloud1Mask.jpg"
+              width="1200"
+              height="800"
+            />
+          </g>
+        </mask>
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!-- This is a recreation of Unfold's (https://dribbble.com/unfold) parallax scene: https://cdn.dribbble.com/users/14268/screenshots/3275340/northface.gif -->
-<div class="scrollDist"></div>
-<div class="main">
-  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-    <mask id="m">
-      <g class="cloud1">
-        <rect fill="#fff" width="100%" height="801" y="799" />
-        <image xlink:href="https://assets.codepen.io/721952/cloud1Mask.jpg" width="1200" height="800"/>
-      </g>
-    </mask>
-    
-    <image class="sky" xlink:href="https://assets.codepen.io/721952/sky.jpg"  width="1200" height="590" />
-    <image class="mountBg" xlink:href="https://assets.codepen.io/721952/mountBg.png" width="1200" height="800"/>    
-    <image class="mountMg" xlink:href="https://assets.codepen.io/721952/mountMg.png" width="1200" height="800"/>    
-    <image class="cloud2" xlink:href="https://assets.codepen.io/721952/cloud2.png" width="1200" height="800"/>    
-    <image class="cloud4" xlink:href="https://assets.codepen.io/721952/cloud2.png" width="1200" height="800"/>    
-    <image class="mountFg" xlink:href="https://assets.codepen.io/721952/mountFg.png" width="1200" height="800"/>
-    <image class="cloud1" xlink:href="https://assets.codepen.io/721952/cloud1.png" width="1200" height="800"/>
-    <image class="cloud3" xlink:href="https://assets.codepen.io/721952/cloud3.png" width="1200" height="800"/>
-    <text fill="#fff" x="350" y="200">EXPLORE</text>
-    <polyline class="arrow" fill="#fff" points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
-    
-    <g mask="url(#m)">
-      <rect fill="#fff" width="100%" height="100%"/>   
-      <text x="350" y="200" fill="#162a43">FURTHER</text>
+        <image
+          class="sky"
+          xlink:href="https://assets.codepen.io/721952/sky.jpg"
+          width="1200"
+          height="590"
+        />
+        <image
+          class="mountBg"
+          xlink:href="https://assets.codepen.io/721952/mountBg.png"
+          width="1200"
+          height="800"
+        />
+        <image
+          class="mountMg"
+          xlink:href="https://assets.codepen.io/721952/mountMg.png"
+          width="1200"
+          height="800"
+        />
+        <image
+          class="cloud2"
+          xlink:href="https://assets.codepen.io/721952/cloud2.png"
+          width="1200"
+          height="800"
+        />
+        <image
+          class="cloud4"
+          xlink:href="https://assets.codepen.io/721952/cloud2.png"
+          width="1200"
+          height="800"
+        />
+        <image
+          class="mountFg"
+          xlink:href="https://assets.codepen.io/721952/mountFg.png"
+          width="1200"
+          height="800"
+        />
+        <image
+          class="cloud1"
+          xlink:href="https://assets.codepen.io/721952/cloud1.png"
+          width="1200"
+          height="800"
+        />
+        <image
+          class="cloud3"
+          xlink:href="https://assets.codepen.io/721952/cloud3.png"
+          width="1200"
+          height="800"
+        />
+        <text fill="#fff" x="350" y="200">EXPLORE</text>
+        <!-- <polyline
+          class="arrow"
+          fill="#fff"
+          points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250"
+        /> -->
 
-      <text x="350" y="700" fill="#162a43">SOME TEXT</text>
+        <g mask="url(#m)">
+          <rect fill="#fff" width="100%" height="800" />
+          <!-- <text x="350" y="200" fill="#162a43">FURTHER</text> -->
 
-      
-      
-    </g>
 
-    
-    
-    <rect id="arrowBtn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer"/>
-  </svg>
-  
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script>
-<script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
-<script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
-<script src='https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js'></script><script  src="./script.js"></script>
+          <foreignObject x="0" y="0" width="100%" height="100%" >
+            <div class="app">
+              <div class="cardList">
+                <button class="cardList__btn btn btn--left">
+                  <div class="icon">
+                    <svg>
+                      <use xlink:href="#arrow-left"></use>
+                    </svg>
+                  </div>
+                </button>
 
-</body>
+                <div class="cards__wrapper">
+                  <div class="card current--card">
+                    <div class="card__image">
+                      <img
+                        src="https://source.unsplash.com/Z8dtTatMVMw"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="card next--card">
+                    <div class="card__image">
+                      <img
+                        src="https://source.unsplash.com/9dmycbFE7mQ"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="card previous--card">
+                    <div class="card__image">
+                      <img
+                        src="https://source.unsplash.com/m7K4KzL5aQ8"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <button class="cardList__btn btn btn--right">
+                  <div class="icon">
+                    <svg>
+                      <use xlink:href="#arrow-right"></use>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+
+              <div class="infoList">
+                <div class="info__wrapper">
+                  <div class="info current--info">
+                    <h1 class="text name">Highlands</h1>
+                    <h4 class="text location">Scotland</h4>
+                    <p class="text description">The mountains are calling</p>
+                  </div>
+
+                  <div class="info next--info">
+                    <h1 class="text name">Machu Pichu</h1>
+                    <h4 class="text location">Peru</h4>
+                    <p class="text description">Adventure is never far away</p>
+                  </div>
+
+                  <div class="info previous--info">
+                    <h1 class="text name">Chamonix</h1>
+                    <h4 class="text location">France</h4>
+                    <p class="text description">Let your dreams come true</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="app__bg">
+                <div class="app__bg__image current--image">
+                  <img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" />
+                </div>
+                <div class="app__bg__image next--image">
+                  <img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" />
+                </div>
+                <div class="app__bg__image previous--image">
+                  <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
+                </div>
+              </div>
+            </div>
+
+            
+
+            <svg class="icons" style="display: none">
+              <symbol
+                id="arrow-left"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <polyline
+                  points="328 112 184 256 328 400"
+                  style="
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 48px;
+                  "
+                />
+              </symbol>
+              <symbol
+                id="arrow-right"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <polyline
+                  points="184 112 328 256 184 400"
+                  style="
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 48px;
+                  "
+                />
+              </symbol>
+            </svg>
+
+            
+          </foreignObject>
+
+          
+        </g>
+
+        <!-- <rect
+          id="arrowBtn"
+          width="100"
+          height="100"
+          opacity="0"
+          x="550"
+          y="220"
+          style="cursor: pointer"
+        /> -->
+      </svg>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+    <script src="./script.js"></script>
+    <!-- partial -->
+    <script
+    src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"
+  ></script>
+  <script src="./script-galery.js"></script>
+  </body>
 </html>

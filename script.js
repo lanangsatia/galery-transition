@@ -24,7 +24,9 @@ gsap
   .fromTo(".cloud3", { y: -50 }, { y: -350 }, 0)
   .fromTo(".mountBg", { y: -10 }, { y: -100 }, 0)
   .fromTo(".mountMg", { y: -30 }, { y: -250 }, 0)
-  .fromTo(".mountFg", { y: -50 }, { y: -300 }, 0);
+  .fromTo(".mountFg", { y: -50 }, { y: -300 }, 0)
+  .fromTo(".galery", { y: 1800 }, { y: -1200 }, 0);
+
 
 $("#arrowBtn").on("mouseenter", (e) => {
   gsap.to(".arrow", {
